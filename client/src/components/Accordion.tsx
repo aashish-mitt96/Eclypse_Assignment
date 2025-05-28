@@ -1,45 +1,34 @@
 import { ChevronDown } from 'lucide-react';
 
 export default function Accordion() {
+    const containerTop = 3946;
+    const containerLeft = 100;
+    const containerWidth = 1342;
+
+    // Adjust top relative to container top
     const sections = [
-        {
-            title: "Size & Fit",
-            titleTop: "3946px",
-            borderTop: "4024px",
-            iconTop: "3942.8px",
-        },
-        {
-            title: "Delivery & Returns",
-            titleTop: "4099px",
-            borderTop: "4177px",
-            iconTop: "4092.8px",
-        },
-        {
-            title: "How This Was Made",
-            titleTop: "4252px",
-            borderTop: "4330px",
-            iconTop: "4242.8px",
-        },
+        { title: "Size & Fit", titleTop: 0, borderTop: 78, iconTop: -3.2 },
+        { title: "Delivery & Returns", titleTop: 153, borderTop: 231, iconTop: 146.8 },
+        { title: "How This Was Made", titleTop: 306, borderTop: 384, iconTop: 296.8 },
     ];
 
     return (
-        <>
+        <div
+            className="absolute text-white"
+            style={{
+                top: `${containerTop}px`,
+                left: `${containerLeft}px`,
+                width: `${containerWidth}px`,
+                fontFamily: 'Neue Montreal, sans-serif',
+                fontWeight: 400,
+            }}
+        >
             {sections.map((section, index) => (
-                <div key={index}>
+                <div key={index} className="relative">
                     {/* Title */}
                     <div
-                        className="absolute text-white"
-                        style={{
-                            width: "800px",
-                            height: "38px",
-                            top: section.titleTop,
-                            left: "50px",
-                            fontFamily: "Neue Montreal",
-                            fontWeight: 400,
-                            fontSize: "32px",
-                            lineHeight: "100%",
-                            letterSpacing: "-2%",
-                        }}
+                        className="text-[32px] leading-[1] tracking-[-0.02em] w-[800px] h-[38px] absolute"
+                        style={{ top: `${section.titleTop}px`, left: 0 }}
                         role="heading"
                         aria-level={3}
                     >
@@ -49,10 +38,7 @@ export default function Accordion() {
                     {/* Chevron Icon */}
                     <div
                         className="absolute"
-                        style={{
-                            top: section.iconTop,
-                            left: "1339.8px",
-                        }}
+                        style={{ top: `${section.iconTop}px`, left: '1293.8px' }}
                         aria-hidden="true"
                     >
                         <ChevronDown color="white" size={24} />
@@ -60,19 +46,11 @@ export default function Accordion() {
 
                     {/* Border Container */}
                     <div
-                        className="absolute border"
-                        style={{
-                            width: "1342px",
-                            top: section.borderTop,
-                            left: "50px",
-                            borderColor: "rgba(61, 61, 61, 1)",
-                            borderWidth: "1px",
-                        }}
-                    >
-                        {/* Static content placeholder */}
-                    </div>
+                        className="absolute border border-[#3d3d3d]"
+                        style={{ top: `${section.borderTop}px`, left: 0, width: `${containerWidth}px` }}
+                    />
                 </div>
             ))}
-        </>
+        </div>
     );
 }
