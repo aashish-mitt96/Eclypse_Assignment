@@ -14,7 +14,7 @@ const Footer = () => {
         height: "215px",
       }}
     >
-      {/* Column 1: Logo + Nav with custom dimension and gap */}
+      {/* Column 1: Logo + Navigation */}
       <div className="flex flex-col w-[196px] h-[167px] gap-y-[67px]">
         <div className="flex items-center space-x-2">
           <span className="text-3xl font-semibold">Eclypse</span>
@@ -31,26 +31,16 @@ const Footer = () => {
 
         <nav className="text-sm space-y-1">
           <div className="flex space-x-4">
-            <a href="#" className="hover:underline">
-              Home
-            </a>
+            <a href="#" className="hover:underline">Home</a>
             <span>/</span>
-            <a href="#" className="hover:underline">
-              About
-            </a>
+            <a href="#" className="hover:underline">About</a>
             <span>/</span>
-            <a href="#" className="hover:underline">
-              Buy
-            </a>
+            <a href="#" className="hover:underline">Buy</a>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="hover:underline">
-              Our Customers
-            </a>
+            <a href="#" className="hover:underline">Our Customers</a>
             <span>/</span>
-            <a href="#" className="hover:underline">
-              Contacts
-            </a>
+            <a href="#" className="hover:underline">Contacts</a>
           </div>
         </nav>
       </div>
