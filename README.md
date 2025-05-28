@@ -10,4 +10,3 @@
    - `cd server && npm install`
 3. Start the app:
    - `cd client && npm run dev`
-   - 
