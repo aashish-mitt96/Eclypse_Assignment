@@ -1,12 +1,13 @@
-## Tech Stack
-- Frontend: React, Tailwind CSS, TypeScript
-- Backend: Node.js, Express 
+# 🧩 React Assignment
 
-## How to Run
+This is a simple React.js project built as part of a learning assignment. It demonstrates the use of components, props, state, and basic routing.
 
-1. Clone the repo
-2. Install dependencies:
-   - `cd client && npm install`
-   - `cd server && npm install`
-3. Start the app:
-   - `cd client && npm run dev`
+---
+
+## ⚙️ Tech Stack
+
+- React.js
+- Vite / Create React App
+- Tailwind CSS 
+
+---
